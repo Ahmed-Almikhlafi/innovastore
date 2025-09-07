@@ -34,3 +34,48 @@ InNova Store is a simple e-commerce mobile application developed using **Flutter
 ---
 
 ## Project Structure
+
+```text
+lib/
+│
+├── main.dart # App entry point, routing, and Provider setup
+├── models/
+│   └── product.dart # Product model with JSON serialization
+├── providers/
+│   └── cart_provider.dart # Cart management with notifyListeners()
+├── pages/
+│   ├── product_list_page.dart # Product list with search bar
+│   ├── product_details_page.dart # Product details page
+│   ├── cart_page.dart # Shopping cart page
+│   └── profile_page.dart # User profile input page
+└── services/
+    └── api_service.dart # Fetching data from FakeStoreAPI
+```
+
+
+
+---
+
+## Technologies Used
+- **Flutter:** Cross-platform mobile development framework.
+- **Provider:** State management for dynamic UI updates.
+- **HTTP:** Fetching data from external API.
+- **SharedPreferences:** Local storage for user data.
+- **Material Design:** Modern UI components and styling.
+
+---
+## Additional Notes
+
+- The **Profile Page** appears only once at the first launch, storing the state locally.
+- All **cart interactions** (add/remove) update the UI instantly.
+- **FakeStoreAPI** is used to provide ready-made product data without the need for a custom backend.
+- The app includes a **search bar** to filter products dynamically.
+
+## How to Run
+1. Clone or download the project.
+2. Install dependencies:  
+   ```bash
+   flutter pub get
+3. Run the app:
+   ```bash
+   flutter run
